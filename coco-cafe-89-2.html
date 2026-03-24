@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coco Cafe 89 | Ηράκλειο</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #f59e0b;
+      --accent4-color: #f97316;
+      --dark-background-color: #0f0f0f;
+      --medium-background-color: #f8f5f0;
+      --light-background-color: #ffffff;
+      --light-text-color: #ffffff;
+      --dark-text-color: #1a1a1a;
+      --gray-text-color: #6b7280;
+      --light-border-color: #e5e7eb;
+      --primary-button-text-color: #1a1a1a;
+      --font-family-heading: 'Georgia', serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: 'Inter', sans-serif; background: #fff; }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="global-header" class="code-section">
+  <!-- Animated Background Elements -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <div class="absolute top-20 left-10 w-32 h-32 rounded-full bg-gradient-to-r from-amber-400/20 to-yellow-300/20 blur-3xl animate-pulse"></div>
+    <div class="absolute top-40 right-20 w-24 h-24 rounded-full bg-gradient-to-r from-orange-400/20 to-amber-300/20 blur-2xl animate-pulse" style="animation-delay: 0.5s;"></div>
+    <div class="absolute bottom-40 left-1/4 w-20 h-20 rounded-full bg-gradient-to-r from-yellow-500/15 to-amber-400/15 blur-xl animate-pulse" style="animation-delay: 1s;"></div>
+  </div>
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#0f0f0f] via-[#0f0f0f]/98 to-[#0f0f0f] backdrop-blur-xl border-b border-amber-500/20 shadow-2xl shadow-amber-500/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="/" class="group flex items-center gap-3">
+          <div class="relative">
+            <img src="https://assets.ls-assets.com/uploads/9a954bee-502e-485c-b0e0-0795d0cdacaa/957097e4-610d-44a6-8c9a-7b5d65ade363.webp?w=160" alt="Coco Cafe 89 Logo" class="h-14 w-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <div class="absolute -inset-2 bg-amber-500/30 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          </div>
+          <div class="hidden sm:block">
+            <span class="text-2xl font-black bg-gradient-to-r from-amber-400 via-orange-400 to-amber-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-pulse">COCO</span>
+            <span class="text-2xl font-black text-white">CAFE</span>
+          </div>
+        </a>
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center gap-2">
+          <a href="#menu-section" class="group relative px-5 py-2.5 text-white hover:text-[#1a1a1a] font-bold transition-all duration-300 rounded-full hover:bg-amber-400">
+            <span class="relative z-10 flex items-center gap-2">
+              <i class="fa-solid fa-mug-hot text-amber-400 group-hover:text-[#1a1a1a] transition-colors"></i> Μενού
+            </span>
+          </a>
+          <a href="#reviews-section" class="group relative px-5 py-2.5 text-white hover:text-[#1a1a1a] font-bold transition-all duration-300 rounded-full hover:bg-amber-400">
+            <span class="relative z-10 flex items-center gap-2">
+              <i class="fa-solid fa-star text-amber-400 group-hover:text-[#1a1a1a] transition-colors"></i> Κριτικές
+            </span>
+          </a>
+          <a href="#about-section" class="group relative px-5 py-2.5 text-white hover:text-[#1a1a1a] font-bold transition-all duration-300 rounded-full hover:bg-amber-400">
+            <span class="relative z-10 flex items-center gap-2">
+              <i class="fa-solid fa-heart text-amber-400 group-hover:text-[#1a1a1a] transition-colors"></i> Σχετικά
+            </span>
+          </a>
+          <a href="#contact-section" class="group relative px-5 py-2.5 text-white hover:text-[#1a1a1a] font-bold transition-all duration-300 rounded-full hover:bg-amber-400">
+            <span class="relative z-10 flex items-center gap-2">
+              <i class="fa-solid fa-location-dot text-amber-400 group-hover:text-[#1a1a1a] transition-colors"></i> Επικοινωνία
+            </span>
+          </a>
+          <a href="#menu-section" class="group relative ml-4 bg-gradient-to-r from-amber-400 to-orange-400 text-[#1a1a1a] px-6 py-3 rounded-full font-black text-lg hover:shadow-2xl hover:shadow-amber-400/50 transition-all duration-500 hover:scale-105 hover:-translate-y-1">
+            <span class="relative z-10 flex items-center gap-2">
+              <span>Πάμε για Καφέ!</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition-transform duration-300"></i>
+            </span>
+          </a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden group p-3 bg-amber-400/20 rounded-2xl hover:bg-amber-400/40 transition-all duration-300" aria-label="Menu">
+          <div class="w-6 h-5 flex flex-col justify-between">
+            <span class="w-full h-0.5 bg-amber-400 rounded-full transition-all duration-300"></span>
+            <span class="w-full h-0.5 bg-amber-400 rounded-full transition-all duration-300"></span>
+            <span class="w-full h-0.5 bg-amber-400 rounded-full transition-all duration-300"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-gradient-to-b from-[#0f0f0f] to-[#0f0f0f]/95 border-t border-amber-400/20 backdrop-blur-xl">
+      <div class="px-6 py-8 space-y-4">
+        <a href="#menu-section" class="flex items-center gap-4 text-white hover:text-[#1a1a1a] font-bold text-lg py-3 px-4 rounded-2xl hover:bg-amber-400 transition-all duration-300">
+          <i class="fa-solid fa-mug-hot text-amber-400"></i> Μενού
+        </a>
+        <a href="#reviews-section" class="flex items-center gap-4 text-white hover:text-[#1a1a1a] font-bold text-lg py-3 px-4 rounded-2xl hover:bg-amber-400 transition-all duration-300">
+          <i class="fa-solid fa-star text-amber-400"></i> Κριτικές
+        </a>
+        <a href="#about-section" class="flex items-center gap-4 text-white hover:text-[#1a1a1a] font-bold text-lg py-3 px-4 rounded-2xl hover:bg-amber-400 transition-all duration-300">
+          <i class="fa-solid fa-heart text-amber-400"></i> Σχετικά
+        </a>
+        <a href="#contact-section" class="flex items-center gap-4 text-white hover:text-[#1a1a1a] font-bold text-lg py-3 px-4 rounded-2xl hover:bg-amber-400 transition-all duration-300">
+          <i class="fa-solid fa-location-dot text-amber-400"></i> Επικοινωνία
+        </a>
+        <div class="pt-4">
+          <a href="#menu-section" class="block w-full bg-gradient-to-r from-amber-400 to-orange-400 text-[#1a1a1a] px-6 py-4 rounded-2xl font-black text-center text-lg shadow-xl shadow-amber-400/30">
+            ☕ Πάμε για Καφέ!
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="code-section relative min-h-screen flex items-center justify-center overflow-hidden pt-20" id="hero-section">
+  <div class="absolute inset-0">
+    <img src="https://assets.ls-assets.com/provider/istock/2207892452.jpg?w=1920" alt="Coco Cafe 89" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-br from-black via-black/80 to-black/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+  </div>
+  <!-- Floating Decorative Elements -->
+  <div class="absolute top-1/4 left-10 w-20 h-20 border-4 border-amber-400/30 rounded-full animate-spin" style="animation-duration: 20s;"></div>
+  <div class="absolute top-1/3 right-20 w-16 h-16 border-4 border-orange-400/30 rounded-full animate-bounce" style="animation-duration: 3s;"></div>
+  <div class="absolute bottom-1/3 left-1/4 w-10 h-10 bg-amber-400/20 rounded-lg rotate-45 animate-pulse"></div>
+  <div class="absolute bottom-1/4 right-1/4 w-14 h-14 bg-orange-400/20 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+  <div class="absolute top-1/2 right-10 w-8 h-8 bg-amber-400/10 rounded-full animate-bounce" style="animation-delay: 1s;"></div>
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="text-center lg:text-left">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-400/30 to-orange-400/30 border border-amber-400/40 rounded-full px-5 py-2 mb-8 backdrop-blur-sm">
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-amber-400"></span>
+          </span>
+          <span class="text-white font-bold">Τώρα Ανοιχτά!</span>
+          <i class="fa-solid fa-mug-hot text-amber-400"></i>
+        </div>
+        <!-- Headline -->
+        <h1 class="text-5xl sm:text-6xl lg:text-8xl font-black mb-6 leading-tight">
+          <span class="block text-white">COCO</span>
+          <span class="block bg-gradient-to-r from-amber-400 via-orange-400 to-amber-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-pulse">CAFE</span>
+          <span class="block text-2xl sm:text-3xl lg:text-4xl text-white/80 font-bold mt-2">#89</span>
+        </h1>
+        <!-- Subheadline -->
+        <p class="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+          🌟 Η απόλυτη εμπειρία καφέ στο Ηράκλειο! ☕ <span class="text-amber-400 font-bold">Ζεστοί & Κρύοι καφέδες</span>, <span class="text-orange-400 font-bold">ζουμερά burgers</span> & <span class="text-amber-400 font-bold">υπέροχα cocktails</span> σε μια ατμόσφαιρα που θα σε κάνει να επιστρέφεις ξανά και ξανά!
+        </p>
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
+          <a href="#menu-section" class="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-amber-400 to-orange-400 text-[#1a1a1a] px-8 py-5 rounded-2xl font-black text-xl hover:shadow-2xl hover:shadow-amber-400/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2 overflow-hidden">
+            <span class="relative z-10 flex items-center gap-3">
+              <span>🍽️ Δες το Μενού</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition-transform duration-300"></i>
+            </span>
+          </a>
+          <a href="#contact-section" class="group relative inline-flex items-center justify-center gap-3 bg-transparent border-2 border-amber-400 text-amber-400 px-8 py-5 rounded-2xl font-black text-xl hover:bg-amber-400 hover:text-[#1a1a1a] transition-all duration-500 hover:scale-105">
+            <span class="flex items-center gap-3">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>📍 Βρες μας!</span>
+            </span>
+          </a>
+        </div>
+        <!-- Stats -->
+        <div class="flex flex-wrap gap-6 justify-center lg:justify-start">
+          <div class="text-center p-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+            <div class="text-3xl font-black text-amber-400">5+</div>
+            <div class="text-xs text-gray-400 uppercase tracking-wider">Χρόνια</div>
+          </div>
+          <div class="text-center p-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+            <div class="text-3xl font-black text-amber-400">50+</div>
+            <div class="text-xs text-gray-400 uppercase tracking-wider">Προϊόντα</div>
+          </div>
+          <div class="text-center p-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+            <div class="text-3xl font-black text-amber-400">⭐ 4.9</div>
+            <div class="text-xs text-gray-400 uppercase tracking-wider">Rating</div>
+          </div>
+        </div>
+      </div>
+      <!-- Right Visual -->
+      <div class="hidden lg:block relative">
+        <div class="relative w-96 h-96 mx-auto">
+          <div class="absolute inset-0 border-4 border-dashed border-amber-400/30 rounded-full animate-spin" style="animation-duration: 30s;"></div>
+          <div class="absolute inset-4 border-4 border-dashed border-orange-400/30 rounded-full animate-spin" style="animation-duration: 20s; animation-direction: reverse;"></div>
+          <div class="absolute inset-8 rounded-full overflow-hidden shadow-2xl shadow-amber-400/30 border-4 border-amber-400/50">
+            <img src="https://assets.ls-assets.com/provider/istock/1327256958.jpg?w=600" alt="Premium Coffee" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -top-4 -left-4 bg-amber-400 text-[#1a1a1a] px-4 py-2 rounded-full font-black text-sm shadow-lg animate-bounce" style="animation-duration: 2s;">☕ #1 Καφές</div>
+          <div class="absolute -bottom-4 -right-4 bg-orange-400 text-[#1a1a1a] px-4 py-2 rounded-full font-black text-sm shadow-lg animate-bounce" style="animation-duration: 2.5s;">🍔 Τέλειο Burger</div>
+          <div class="absolute top-1/2 -right-8 bg-white text-[#1a1a1a] px-3 py-2 rounded-full font-black text-xs shadow-lg animate-bounce" style="animation-duration: 3s;">✨ Fresh!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+    <a href="#menu-section" class="group flex flex-col items-center gap-2 text-amber-400 hover:text-orange-400 transition-colors">
+      <span class="text-sm font-bold uppercase tracking-wider">Scroll Down</span>
+      <div class="w-8 h-12 border-2 border-current rounded-full flex items-start justify-center p-2">
+        <div class="w-2 h-3 bg-current rounded-full animate-bounce"></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ===== MENU SECTION ===== -->
+<section id="menu-section" class="code-section bg-gradient-to-b from-white via-[#f8f5f0] to-white py-20 lg:py-32 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-30">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-orange-400/10 rounded-full blur-3xl"></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-3 bg-amber-400/10 border border-amber-400/20 rounded-full px-6 py-2 mb-6">
+        <span class="text-2xl">📋</span>
+        <span class="text-amber-500 font-bold uppercase tracking-wider">Το Μενού μας</span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-[#1a1a1a] mb-6">
+        🍽️ <span class="bg-gradient-to-r from-amber-500 to-orange-400 bg-clip-text text-transparent">Πλήρες Μενού</span>
+      </h2>
+      <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+        ☕ Καφέδες | 🍔 Φαγητό | 🍵 Τσάγια | 🥤 Χυμοί | 🍹 Cocktails
+      </p>
+    </div>
+
+    <!-- ΚΑΦΕΔΕΣ -->
+    <div class="mb-16">
+      <div class="flex items-center justify-center gap-4 mb-10">
+        <div class="h-px w-16 bg-gradient-to-r from-transparent to-amber-400"></div>
+        <h3 class="text-2xl sm:text-3xl font-black text-[#1a1a1a] flex items-center gap-3">
+          ☕ Καφέδες <span class="text-sm font-normal text-gray-400">(Ζεστοί & Κρύοι)</span>
+        </h3>
+        <div class="h-px w-16 bg-gradient-to-l from-transparent to-amber-400"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Coffee Items -->
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Freddo Cappuccino</h4><p class="text-xs text-gray-400 mt-1">Δροσερό & Αναζωογονητικό</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€2.75</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Freddo Espresso</h4><p class="text-xs text-gray-400 mt-1">Έντονος & Δυναμικός</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€2.45</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Cappuccino</h4><p class="text-xs text-gray-400 mt-1">Κλασικός & Αφράτος</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€2.75</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Espresso</h4><p class="text-xs text-gray-400 mt-1">Μονός / Διπλός</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€1.80</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Latte</h4><p class="text-xs text-gray-400 mt-1">Smooth & Creamy</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€2.95</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Ελληνικός</h4><p class="text-xs text-gray-400 mt-1">Παραδοσιακός & Αρωματικός</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€1.80</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Flat White</h4><p class="text-xs text-gray-400 mt-1">Intense & Velvety</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€2.90</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Frappe</h4><p class="text-xs text-gray-400 mt-1">Classic Greek Style</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€2.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Americano</h4><p class="text-xs text-gray-400 mt-1">Long & Strong</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€2.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Cold Brew</h4><p class="text-xs text-gray-400 mt-1">Smooth Cold Extraction</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€2.95</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ΦΑΓΗΤΟ & ΣΝΑΚ -->
+    <div class="mb-16">
+      <div class="flex items-center justify-center gap-4 mb-10">
+        <div class="h-px w-16 bg-gradient-to-r from-transparent to-orange-400"></div>
+        <h3 class="text-2xl sm:text-3xl font-black text-[#1a1a1a] flex items-center gap-3">🍔 Φαγητό & Σνακ</h3>
+        <div class="h-px w-16 bg-gradient-to-l from-transparent to-orange-400"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Classic Burger</h4><p class="text-xs text-gray-400 mt-1">Beef, Cheddar, Lettuce, Tomato</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€8.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Coco Special Burger</h4><p class="text-xs text-gray-400 mt-1">Double Beef, Special Sauce</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€10.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Club Sandwich</h4><p class="text-xs text-gray-400 mt-1">Chicken, Bacon, Avocado</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€7.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Greek Salad</h4><p class="text-xs text-gray-400 mt-1">Φρέσκα Λαχανικά, Φέτα</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€6.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Κουλούρι Θεσσαλονίκης</h4><p class="text-xs text-gray-400 mt-1">Φρέσκο Κάθε Μέρα</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€1.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Toast Σπέσιαλ</h4><p class="text-xs text-gray-400 mt-1">Ζαμπόν, Τυρί, Ντομάτα</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€4.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Caesar Salad</h4><p class="text-xs text-gray-400 mt-1">Chicken, Croutons, Parmesan</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€7.00</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Veggie Wrap</h4><p class="text-xs text-gray-400 mt-1">Hummus, Roasted Veggies</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€6.00</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Pancakes</h4><p class="text-xs text-gray-400 mt-1">Maple Syrup, Berries</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€5.50</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ΤΣΑΓΙΑ -->
+    <div class="mb-16">
+      <div class="flex items-center justify-center gap-4 mb-10">
+        <div class="h-px w-16 bg-gradient-to-r from-transparent to-amber-400"></div>
+        <h3 class="text-2xl sm:text-3xl font-black text-[#1a1a1a] flex items-center gap-3">🍵 Τσάγια Mystea</h3>
+        <div class="h-px w-16 bg-gradient-to-l from-transparent to-amber-400"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Chamomile Dream</h4><p class="text-xs text-gray-400 mt-1">Χαμομήλι, Μέλι, Λεβάντα</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€5.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Green Sencha</h4><p class="text-xs text-gray-400 mt-1">Premium Japanese Green Tea</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€5.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Red Rooibos</h4><p class="text-xs text-gray-400 mt-1">Vanilla, Caramel Notes</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€5.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Peppermint Fresh</h4><p class="text-xs text-gray-400 mt-1">Refreshing & Cool</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€5.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Earl Grey Classic</h4><p class="text-xs text-gray-400 mt-1">Bergamot & Black Tea</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€5.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Lemon Ginger</h4><p class="text-xs text-gray-400 mt-1">Zingy & Warming</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€5.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Berry Hibiscus</h4><p class="text-xs text-gray-400 mt-1">Floral & Fruity</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€5.50</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ΧΥΜΟΙ & ΡΟΦΗΜΑΤΑ -->
+    <div class="mb-16">
+      <div class="flex items-center justify-center gap-4 mb-10">
+        <div class="h-px w-16 bg-gradient-to-r from-transparent to-orange-400"></div>
+        <h3 class="text-2xl sm:text-3xl font-black text-[#1a1a1a] flex items-center gap-3">🥤 Χυμοί & Ροφήματα</h3>
+        <div class="h-px w-16 bg-gradient-to-l from-transparent to-orange-400"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Φρέσκος Χυμός Πορτοκάλι</h4><p class="text-xs text-gray-400 mt-1">100% Φρέσκος</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€3.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Smoothie Mango-Banana</h4><p class="text-xs text-gray-400 mt-1">Tropical Blend</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€4.45</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Smoothie Berry Mix</h4><p class="text-xs text-gray-400 mt-1">Strawberry, Blueberry, Raspberry</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€4.45</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Lemonade</h4><p class="text-xs text-gray-400 mt-1">Φρέσκια & Δροσιστική</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€3.00</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Iced Matcha Latte</h4><p class="text-xs text-gray-400 mt-1">Ceremonial Grade Matcha</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€4.00</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Hot Chocolate</h4><p class="text-xs text-gray-400 mt-1">Rich & Creamy Belgian Cocoa</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€3.50</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Iced Tea Peach</h4><p class="text-xs text-gray-400 mt-1">Refreshing Summer Drink</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€3.00</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Milkshake Vanilla</h4><p class="text-xs text-gray-400 mt-1">Classic & Creamy</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€4.45</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Milkshake Chocolate</h4><p class="text-xs text-gray-400 mt-1">Indulgent & Rich</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€4.45</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-orange-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-orange-500 transition-colors">Φυσικός Χυμός Καρπούζι</h4><p class="text-xs text-gray-400 mt-1">Καλοκαιρινή Δροσιά</p></div>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-3 py-1 rounded-full font-bold text-sm">€3.50</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COCKTAILS 0% -->
+    <div class="mb-8">
+      <div class="flex items-center justify-center gap-4 mb-10">
+        <div class="h-px w-16 bg-gradient-to-r from-transparent to-amber-400"></div>
+        <h3 class="text-2xl sm:text-3xl font-black text-[#1a1a1a] flex items-center gap-3">🍹 Cocktails 0%</h3>
+        <div class="h-px w-16 bg-gradient-to-l from-transparent to-amber-400"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">0% Mai Tai</h4><p class="text-xs text-gray-400 mt-1">Tropical & Refreshing, No Alcohol</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€7.90</span>
+          </div>
+        </div>
+        <div class="group bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-amber-400/30">
+          <div class="flex justify-between items-start">
+            <div><h4 class="font-bold text-[#1a1a1a] group-hover:text-amber-500 transition-colors">Drink & Drive</h4><p class="text-xs text-gray-400 mt-1">Citrus Blend, No Alcohol</p></div>
+            <span class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-full font-bold text-sm">€7.90</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-12">
+      <a href="#contact-section" class="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-amber-400 to-orange-400 text-[#1a1a1a] px-10 py-5 rounded-2xl font-black text-xl hover:shadow-2xl hover:shadow-amber-400/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2 overflow-hidden">
+        <span class="relative z-10 flex items-center gap-3">
+          <span>📞 Κλείσε Τραπέζι Τώρα!</span>
+          <i class="fa-solid fa-phone group-hover:animate-bounce"></i>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="code-section bg-[#0f0f0f] py-20 lg:py-32 relative overflow-hidden" id="about-section">
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, #f59e0b 1px, transparent 0); background-size: 40px 40px;"></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <!-- Image Side -->
+      <div class="relative">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+          <img src="https://assets.ls-assets.com/provider/istock/2244188133.jpg?w=1200" alt="Coco Cafe 89 Atmosphere" class="w-full h-auto">
+        </div>
+        <div class="absolute -bottom-6 -right-6 bg-amber-400 rounded-2xl p-6 shadow-xl">
+          <div class="text-center">
+            <span class="block text-4xl font-bold text-[#1a1a1a]">5+</span>
+            <span class="text-sm font-medium text-[#1a1a1a]/80">Χρόνια Εμπειρίας</span>
+          </div>
+        </div>
+        <div class="absolute -top-4 -left-4 w-24 h-24 border-4 border-amber-400 rounded-2xl -z-10"></div>
+      </div>
+      <!-- Content Side -->
+      <div>
+        <span class="inline-block text-amber-400 font-semibold tracking-wider uppercase mb-4">Γιατί Εμείς</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight" style="font-family: Georgia, serif;">
+          Το δικό σου <span class="text-amber-400">στέκι</span> στην καρδιά του Ηρακλείου
+        </h2>
+        <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+          Στο Coco Cafe 89 πιστεύουμε ότι κάθε φλιτζάνι καφέ έχει τη δική του ιστορία. Είμαστε εδώ για να τη μοιραστούμε μαζί σας, δημιουργώντας στιγμές που θα θυμάστε.
+        </p>
+        <!-- Features Grid -->
+        <div class="grid sm:grid-cols-2 gap-6 mb-8">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-400/10 flex items-center justify-center">
+              <i class="fa-solid fa-mug-hot text-amber-400 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-1">Premium Beans</h4>
+              <p class="text-gray-500 text-sm">Επιλεγμένοι κόκκοι από τις καλύτερες φυτείες</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-400/10 flex items-center justify-center">
+              <i class="fa-solid fa-leaf text-amber-400 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-1">Φρέσκα Υλικά</h4>
+              <p class="text-gray-500 text-sm">Καθημερινή προμήθεια φρέσκων προϊόντων</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-400/10 flex items-center justify-center">
+              <i class="fa-solid fa-heart text-amber-400 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-1">Φιλόξενη Ατμόσφαιρα</h4>
+              <p class="text-gray-500 text-sm">Χώρος που νιώθεις σαν στο σπίτι σου</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-400/10 flex items-center justify-center">
+              <i class="fa-solid fa-clock text-amber-400 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-1">17 Ώρες</h4>
+              <p class="text-gray-500 text-sm">Ανοιχτά από το πρωί ως αργά το βράδυ</p>
+            </div>
+          </div>
+        </div>
+        <a href="#gallery-section" class="inline-flex items-center gap-2 text-amber-400 font-semibold hover:gap-4 transition-all duration-300">
+          <span>Ανακαλύψτε την ατμόσφαιρά μας</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY SECTION ===== -->
+<section class="code-section bg-[#f8f5f0] py-20 lg:py-32" id="gallery-section">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="inline-block text-amber-500 font-semibold tracking-wider uppercase mb-4">Η Ατμόσφαιρα</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a1a] mb-6" style="font-family: Georgia, serif;">Ζήστε την Εμπειρία</h2>
+      <p class="text-gray-500 text-lg max-w-2xl mx-auto">Ανακαλύψτε έναν χώρο σχεδιασμένο για να σας προσφέρει τις πιο ξεχωριστές στιγμές</p>
+    </div>
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4" style="grid-auto-rows: 200px;">
+      <div class="col-span-2 row-span-2 rounded-3xl overflow-hidden group relative">
+        <img src="https://assets.ls-assets.com/provider/istock/2207892452.jpg?w=1200" alt="Coffee Shop Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+          <span class="text-white font-semibold">Σύγχρονος Σχεδιασμός</span>
+        </div>
+      </div>
+      <div class="rounded-3xl overflow-hidden group relative">
+        <img src="https://assets.ls-assets.com/provider/istock/1327256958.jpg?w=600" alt="Latte Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+          <span class="text-white text-sm font-semibold">Latte Art</span>
+        </div>
+      </div>
+      <div class="rounded-3xl overflow-hidden group relative">
+        <img src="https://assets.ls-assets.com/provider/istock/2210179497.jpg?w=600" alt="Friends Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+          <span class="text-white text-sm font-semibold">Παρέα & Καφές</span>
+        </div>
+      </div>
+      <div class="rounded-3xl overflow-hidden group relative">
+        <img src="https://assets.ls-assets.com/provider/istock/2244188133.jpg?w=600" alt="Atmosphere" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+          <span class="text-white text-sm font-semibold">Ατμόσφαιρα</span>
+        </div>
+      </div>
+      <div class="rounded-3xl overflow-hidden group relative">
+        <img src="https://assets.ls-assets.com/provider/istock/2207892452.jpg?w=600" alt="Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+          <span class="text-white text-sm font-semibold">Εσωτερικός Χώρος</span>
+        </div>
+      </div>
+    </div>
+    <!-- Features Row -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+      <div class="text-center p-6 bg-white rounded-2xl shadow-sm">
+        <div class="w-14 h-14 rounded-full bg-amber-400/10 flex items-center justify-center mx-auto mb-4">
+          <i class="fa-solid fa-wifi text-amber-500 text-xl"></i>
+        </div>
+        <h4 class="font-semibold text-[#1a1a1a] mb-1">Free WiFi</h4>
+        <p class="text-gray-500 text-sm">High-speed internet</p>
+      </div>
+      <div class="text-center p-6 bg-white rounded-2xl shadow-sm">
+        <div class="w-14 h-14 rounded-full bg-amber-400/10 flex items-center justify-center mx-auto mb-4">
+          <i class="fa-solid fa-plug text-amber-500 text-xl"></i>
+        </div>
+        <h4 class="font-semibold text-[#1a1a1a] mb-1">USB Ports</h4>
+        <p class="text-gray-500 text-sm">Charge your devices</p>
+      </div>
+      <div class="text-center p-6 bg-white rounded-2xl shadow-sm">
+        <div class="w-14 h-14 rounded-full bg-amber-400/10 flex items-center justify-center mx-auto mb-4">
+          <i class="fa-solid fa-couch text-amber-500 text-xl"></i>
+        </div>
+        <h4 class="font-semibold text-[#1a1a1a] mb-1">Άνετα Καθίσματα</h4>
+        <p class="text-gray-500 text-sm">Χαλαρός χώρος</p>
+      </div>
+      <div class="text-center p-6 bg-white rounded-2xl shadow-sm">
+        <div class="w-14 h-14 rounded-full bg-amber-400/10 flex items-center justify-center mx-auto mb-4">
+          <i class="fa-solid fa-music text-amber-500 text-xl"></i>
+        </div>
+        <h4 class="font-semibold text-[#1a1a1a] mb-1">Ambient Music</h4>
+        <p class="text-gray-500 text-sm">Perfect atmosphere</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="code-section relative py-20 lg:py-32 overflow-hidden" id="contact-section">
+  <div class="absolute inset-0">
+    <img src="https://assets.ls-assets.com/provider/istock/2210179497.jpg?w=1920" alt="Coco Cafe Team" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/90"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <!-- Left Content -->
+      <div>
+        <span class="inline-block text-amber-400 font-semibold tracking-wider uppercase mb-4">Επικοινωνία</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight" style="font-family: Georgia, serif;">
+          Έλα να σε <span class="text-amber-400">κεράσουμε</span>
+        </h2>
+        <p class="text-gray-300 text-lg mb-8 leading-relaxed">Βρίσκουμε στην καρδιά του Ηρακλείου, εύκολα προσβάσιμοι με τα πόδια ή με αυτοκίνητο. Παρκινγκ διαθέσιμο στην περιοχή.</p>
+        <!-- Contact Cards -->
+        <div class="space-y-4">
+          <a href="https://maps.google.com/?q=Leof.+62+Martiron+109+Iraklio" target="_blank" class="flex items-center gap-4 p-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 group">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-400 flex items-center justify-center">
+              <i class="fa-solid fa-location-dot text-[#1a1a1a] text-lg"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-1">Διεύθυνση</h4>
+              <p class="text-gray-400 text-sm">Leof. 62 Martiron 109, Iraklio</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-amber-400 ml-auto opacity-0 group-hover:opacity-100 transition-opacity"></i>
+          </a>
+          <a href="tel:+302810325000" class="flex items-center gap-4 p-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 group">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-400 flex items-center justify-center">
+              <i class="fa-solid fa-phone text-[#1a1a1a] text-lg"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-1">Τηλέφωνο</h4>
+              <p class="text-gray-400 text-sm">281 032 5000</p>
+            </div>
+          </a>
+          <div class="flex items-center gap-4 p-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-400 flex items-center justify-center">
+              <i class="fa-solid fa-clock text-[#1a1a1a] text-lg"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-1">Ωράριο</h4>
+              <p class="text-gray-400 text-sm">Δευ-Παρ: 7:00–00:00 | Σαβ: 8:00–01:00 | Κυρ: 9:00–00:00</p>
+            </div>
+          </div>
+        </div>
+        <!-- Social Links -->
+        <div class="mt-8 flex items-center gap-4">
+          <a href="#" class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white hover:bg-amber-400 hover:text-[#1a1a1a] transition-all duration-300">
+            <i class="fa-brands fa-facebook-f text-lg"></i>
+          </a>
+          <a href="#" class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white hover:bg-amber-400 hover:text-[#1a1a1a] transition-all duration-300">
+            <i class="fa-brands fa-instagram text-lg"></i>
+          </a>
+          <a href="#" class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white hover:bg-amber-400 hover:text-[#1a1a1a] transition-all duration-300">
+            <i class="fa-brands fa-tiktok text-lg"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Map -->
+      <div class="relative">
+        <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.123456789!2d25.1234567!3d35.3376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDIwJzE1LjQiTiAyNcKwMDcnMjQuNCJF!5e0!3m2!1sel!2sgr!4v1234567890!5m2!1sel!2sgr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="grayscale hover:grayscale-0 transition-all duration-500"></iframe>
+        </div>
+        <div class="absolute -top-4 -right-4 w-24 h-24 border-4 border-amber-400 rounded-2xl -z-10"></div>
+        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-amber-400/20 rounded-2xl -z-10"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="global-footer" class="bg-gradient-to-b from-[#0f0f0f] to-black border-t border-amber-400/20 relative overflow-hidden">
+  <div class="absolute top-0 left-1/4 w-64 h-64 bg-amber-400/5 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 right-1/4 w-64 h-64 bg-orange-400/5 rounded-full blur-3xl"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <!-- Brand Column -->
+      <div class="lg:col-span-1">
+        <a href="/" class="inline-block mb-6 group">
+          <img src="https://assets.ls-assets.com/uploads/9a954bee-502e-485c-b0e0-0795d0cdacaa/957097e4-610d-44a6-8c9a-7b5d65ade363.webp?w=160" alt="Coco Cafe 89 Logo" class="h-14 w-auto brightness-0 invert transition-transform duration-500 group-hover:scale-110">
+        </a>
+        <div class="inline-flex items-center gap-2 bg-amber-400/10 border border-amber-400/20 rounded-full px-4 py-2 mb-4">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
+          </span>
+          <span class="text-amber-400 text-xs font-bold">Τώρα Ανοιχτά!</span>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          ☕ Το δικό σου στέκι στην καρδιά του Ηρακλείου! <span class="text-amber-400">Ποιοτικός καφές</span>, <span class="text-orange-400">υπέροχα πιάτα</span> & <span class="text-amber-400">αξέχαστη ατμόσφαιρα</span>.
+        </p>
+        <div class="flex items-center gap-3">
+          <a href="#" class="group w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400/20 to-orange-400/20 border border-amber-400/20 flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-amber-400 hover:to-orange-400 hover:text-[#1a1a1a] hover:scale-110 transition-all duration-300">
+            <i class="fa-brands fa-facebook-f text-lg"></i>
+          </a>
+          <a href="#" class="group w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400/20 to-orange-400/20 border border-amber-400/20 flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-amber-400 hover:to-orange-400 hover:text-[#1a1a1a] hover:scale-110 transition-all duration-300">
+            <i class="fa-brands fa-instagram text-lg"></i>
+          </a>
+          <a href="#" class="group w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400/20 to-orange-400/20 border border-amber-400/20 flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-amber-400 hover:to-orange-400 hover:text-[#1a1a1a] hover:scale-110 transition-all duration-300">
+            <i class="fa-brands fa-tiktok text-lg"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-white font-black text-xl mb-6 flex items-center gap-2">
+          <span class="w-8 h-8 bg-amber-400/20 rounded-lg flex items-center justify-center text-amber-400">📍</span> Γρήγοροι Σύνδεσμοι
+        </h4>
+        <ul class="space-y-3">
+          <li><a href="#hero-section" class="group flex items-center gap-2 text-gray-400 hover:text-amber-400 transition-colors"><i class="fa-solid fa-chevron-right text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity"></i> Αρχική</a></li>
+          <li><a href="#menu-section" class="group flex items-center gap-2 text-gray-400 hover:text-amber-400 transition-colors"><i class="fa-solid fa-chevron-right text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity"></i> Μενού</a></li>
+          <li><a href="#about-section" class="group flex items-center gap-2 text-gray-400 hover:text-amber-400 transition-colors"><i class="fa-solid fa-chevron-right text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity"></i> Σχετικά με εμάς</a></li>
+          <li><a href="#gallery-section" class="group flex items-center gap-2 text-gray-400 hover:text-amber-400 transition-colors"><i class="fa-solid fa-chevron-right text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity"></i> Gallery</a></li>
+          <li><a href="#contact-section" class="group flex items-center gap-2 text-gray-400 hover:text-amber-400 transition-colors"><i class="fa-solid fa-chevron-right text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity"></i> Επικοινωνία</a></li>
+        </ul>
+      </div>
+      <!-- Hours -->
+      <div>
+        <h4 class="text-white font-black text-xl mb-6 flex items-center gap-2">
+          <span class="w-8 h-8 bg-amber-400/20 rounded-lg flex items-center justify-center text-amber-400">⏰</span> Ωράριο Λειτουργίας
+        </h4>
+        <div class="space-y-3">
+          <div class="flex justify-between items-center p-3 bg-white/5 rounded-xl border border-white/5">
+            <span class="text-gray-400 text-sm">Δευτέρα - Παρασκευή</span>
+            <span class="bg-amber-400/20 text-amber-400 px-3 py-1 rounded-full text-xs font-bold">7:00 - 00:00</span>
+          </div>
+          <div class="flex justify-between items-center p-3 bg-white/5 rounded-xl border border-white/5">
+            <span class="text-gray-400 text-sm">Σάββατο</span>
+            <span class="bg-orange-400/20 text-orange-400 px-3 py-1 rounded-full text-xs font-bold">8:00 - 01:00</span>
+          </div>
+          <div class="flex justify-between items-center p-3 bg-white/5 rounded-xl border border-white/5">
+            <span class="text-gray-400 text-sm">Κυριακή</span>
+            <span class="bg-amber-400/20 text-amber-400 px-3 py-1 rounded-full text-xs font-bold">9:00 - 00:00</span>
+          </div>
+        </div>
+      </div>
+      <!-- Contact Info -->
+      <div>
+        <h4 class="text-white font-black text-xl mb-6 flex items-center gap-2">
+          <span class="w-8 h-8 bg-amber-400/20 rounded-lg flex items-center justify-center text-amber-400">📞</span> Επικοινωνία
+        </h4>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <div class="w-10 h-10 bg-amber-400/20 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-location-dot text-amber-400"></i></div>
+            <div><span class="text-white font-semibold block">Διεύθυνση</span><span class="text-gray-400 text-sm">Leof. 62 Martiron 109<br>Iraklio, Κρήτη</span></div>
+          </li>
+          <li class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-amber-400/20 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-phone text-amber-400"></i></div>
+            <div><span class="text-white font-semibold block">Τηλέφωνο</span><a href="tel:+302810325000" class="text-amber-400 hover:text-orange-400 transition-colors text-sm">281 032 5000</a></div>
+          </li>
+          <li class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-amber-400/20 rounded-xl flex items-center justify-center flex-shrink-0"><i class="fa-regular fa-envelope text-amber-400"></i></div>
+            <div><span class="text-white font-semibold block">Email</span><a href="/cdn-cgi/l/email-protection#462f2820290625292529252720237e7f682134" class="text-amber-400 hover:text-orange-400 transition-colors text-sm"><span class="__cf_email__" data-cfemail="9ff6f1f9f0dffcf0fcf0fcfef9faa7a6b1f8ed">[email&#160;protected]</span></a></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Divider -->
+    <div class="border-t border-amber-400/20 mt-12 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-4">
+          <span class="text-4xl">☕</span>
+          <p class="text-gray-500 text-sm">© 2026 <span class="text-amber-400 font-bold">Coco Cafe 89</span>. Φτιαγμένο με ❤️ στο Ηράκλειο.</p>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-gray-500 text-sm hover:text-amber-400 transition-colors hover:underline">Πολιτική Απορρήτου</a>
+          <span class="text-amber-400">•</span>
+          <a href="#" class="text-gray-500 text-sm hover:text-amber-400 transition-colors hover:underline">Όροι Χρήσης</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Mobile menu toggle
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click'
